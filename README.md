@@ -171,4 +171,56 @@ print('최대값 :', max)
 print('최소값 :', min)
 
 
+"""
+이름 : 박민지
+날짜 : 2021/04/08
+내용 : 파이썬 선택정렬 연습문제
+"""
 
+dataset = [3, 5, 1, 2, 4]
+size = len(dataset)
+
+for i in range(size - 1):
+
+    for j in range(i+1, size):
+
+        if dataset[i] > dataset[j]:
+            tmp = dataset[i]
+            #dataset[i] =dataset[j]
+            dataset[j] = tmp
+
+    print('%d Round : %s' % (i, dataset))
+
+print('Result :', dataset)
+
+
+"""
+이름 : 박민지
+날짜 : 2021/04/08
+내용 : 파이썬 이진검색 연습문제.
+"""
+
+dataset = [5, 10, 18, 22, 35, 55, 75, 103, 152]
+value = int(input('검색할 숫자 입력 :'))
+
+start = 0
+end = len(dataset) -1
+loc = 0
+state = False
+
+while start <= end:
+    mid = (start + end) // 2
+
+    if dataset[mid] > value:
+        end = #mid - 1
+    elif dataset[mid] < value:
+        start = # mid + 1
+    else:
+        loc = mid
+        state = True
+        break
+
+if state:
+    print('찾은 위치 : %d번째' % (loc + 1))
+else:
+    print(('찾는 숫자가 없습니다.'))
